@@ -11,7 +11,7 @@ you hane some options
 
 1. Room management
 2. Booking management
-3. Statas
+3. Reports
 0. Exit
 """
 )   
@@ -45,7 +45,25 @@ def print_booking_managament_menu() -> None:
 6. Update booking
 7. Cancell booking by id
 0. Exit
-""")
+"""
+)
+    return
+
+
+def print_reports_menu() -> None:
+    print("""
+--------- reports ---------
+
+1. Active bookings quantity report
+2. Cancelled bookings quantity report
+3. Total revenue from active bookings report
+4. Total cancellation fees from canceled bookings report
+5. Most popular room by number of active bookings report
+6. Number of bookings in each room report
+7. Percentage of occupancy of a particular room on a given date report
+8. Exit
+"""
+)
     return
 
 

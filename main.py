@@ -1,5 +1,6 @@
 import room_managament
 import booking_management
+import reports
 import prints
 import valid_inputs
 
@@ -15,6 +16,9 @@ def main() -> None:
         
         elif user_choice == "2":
             booking_management.booking_management_menu()
+
+        elif user_choice == "3":
+            reports.reports_menu()
 
         elif user_choice == "0":
             break

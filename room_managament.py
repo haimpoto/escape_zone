@@ -40,6 +40,8 @@ def room_managament_menu():
             if rooms:
                 connections.dump_rooms(rooms)
                 print("The room is apdated")
+            else:
+                print("The room is not found")
 
         elif user_choice == "0":
             break
@@ -152,7 +154,7 @@ def update_room_by_id(rooms: dict, user_room_id: int) -> list | None:
     rooms[room_location] = the_room
     return rooms
     
-
+    
 def enabling_and_disabling_room(rooms: list, user_room_id: int):
     room_location = find_room_by_id(rooms=rooms, user_room_id=user_room_id)
     if room_location is None:

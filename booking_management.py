@@ -55,7 +55,8 @@ def booking_management_menu():
             if bookings:
                 connections.dump_bookings(bookings)
                 print("The booking is cancelled")
-
+            else:
+                print("The booking is not found")
 
         elif user_choice == "0":
             break
@@ -95,7 +96,17 @@ def find_booking_by_str_date(bookings: list, year: str, month: str, day: str) ->
     return booking_location
 
 
-
+def cancell_booking_by_id(bookings: list, user_booking_id: int):
+    booking_location = find_booking_by_id(bookings, user_booking_id)
+    if booking_location is None:
+        return
+    the_booking = bookings[booking_location]
+    if the_booking["status"] == "Active":
+        the_booking["status"] = "Cancelled"
+    prints.print_booking(the_booking)
+    bookings[booking_location] = the_booking
+    return bookings
+    
 
 # def convert_datetime_to_str(date: datetime) -> str:
 #     pass

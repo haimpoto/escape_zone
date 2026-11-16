@@ -29,4 +29,6 @@ def load_bookings() -> list[dict]:
 
 
 def dump_bookings(bookings: list[dict]) -> None:
-    pass
+    with open(BOOKING_PATH, "w") as json_file:
+        json.dump(bookings, json_file, indent=4)
+        

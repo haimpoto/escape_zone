@@ -48,14 +48,13 @@ def room_managament_menu():
             print(f"{user_choice} is not an option")
 
 
-def find_room_by_id(rooms: list, user_room_id: int) -> int:
+def find_room_by_id(rooms: list, user_room_id: int) -> int | None:
     room_location = -1
     for i, room in enumerate(rooms):
         room_id = int("".join(ch for ch in room["room_id"] if ch.isdigit()))
         if room_id == user_room_id:
             room_location = i
     if room_location == -1:
-        print("The room is not found")
         return None
     print("The room is found:")
     return room_location

@@ -27,7 +27,5 @@ def main() -> None:
             print(f"{user_choice} is not an option")
 
 
-
-
 if __name__ == "__main__":
     main()

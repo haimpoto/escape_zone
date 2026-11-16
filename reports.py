@@ -66,7 +66,7 @@ def get_total_cancellation_fees_from_cancelled_bookings() -> int | float:
     return total_cancellation_fees
   
 
-def get_number_of_bookings(only_active_rooms=False) -> dict:
+def get_number_of_bookings(only_active_rooms: bool=False) -> dict:
     bookings = connections.load_bookings()
     number_of_bookings = {}
     for booking in bookings:
